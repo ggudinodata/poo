@@ -29,6 +29,7 @@ public class Empleado {
         this.puesto = puesto;
         this.salario = 1500.00;
     }
+    
     @Override
     public String toString(){
         return "Id: "+ this.id + "Nombre: " + this.nombre + "Puesto: " +
@@ -38,6 +39,15 @@ public class Empleado {
     public static int mostrarTotalEmpleados(){
         return Empleado.totalEmpleados;
     }
+    
+    public void actualizarSalario(int porcentaje){
+        this.salario = salario + (salario * porcentaje / 100);
+    }
+    
+    public void actualizarSalario(double salarioActual ){
+        this.salario = salarioActual;
+    }
+    
     public void setId(int id){
         this.id = id;
     }
@@ -48,10 +58,6 @@ public class Empleado {
 
     public void setPuesto(String puesto) {
         this.puesto = puesto;
-    }
-
-    public void setSalario(double salario) {
-        this.salario = salario;
     }
 
     public int getId() {
@@ -69,6 +75,4 @@ public class Empleado {
     public double getSalario() {
         return salario;
     }
-    
-    
 }
