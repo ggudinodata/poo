@@ -32,8 +32,8 @@ public class Empleado {
     
     @Override
     public String toString(){
-        return "Id: "+ this.id + "Nombre: " + this.nombre + "Puesto: " +
-                this.puesto + "Salario: " + this.salario;
+        return "Id: "+ this.id + " Nombre: " + this.nombre + " Puesto: " +
+                this.puesto + " Salario: " + this.salario;
     }
     
     public static int mostrarTotalEmpleados(){
